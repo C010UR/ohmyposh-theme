@@ -43,8 +43,18 @@
           "foreground": "#ffffff",
           "background": "#10ac84",
           "properties": {
-            "prefix": " \uE718 ",
-            "display_package_manager": true
+            "prefix": " \uE718 "
+          }
+        },
+        {
+          "type": "npm",
+          "style": "powerline",
+          "powerline_symbol": "\uE0B0",
+          "foreground": "#193549",
+          "background": "#ffeb3b",
+          "template": "\ue71e {{ .Full }} ",
+          "properties": {
+            "prefix": " \uE718 "
           }
         },
         {
