@@ -221,7 +221,7 @@
                     "style": "plain",
                     "foreground": "#61AFEF",
                     "properties": {
-                        "time_format": "15:04:05"
+                        "time_format": "Mon 15:04:05"
                     },
                     "template": "[{{ .CurrentDate | date .Format }}]"
                 }
