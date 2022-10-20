@@ -59,7 +59,7 @@
           "foreground": "#fefefe",
           "powerline_symbol": "\ue0b0",
           "style": "powerline",
-          "template": " \ue738 {{ if .Error }}{{ .Error }}{{ else }}{{ .Major }}.{{ .Minor }}{{ end }} ",
+          "template": " \ue738 {{ if .Error }}Java{{ else }}{{ .Major }}.{{ .Minor }}{{ end }} ",
           "type": "java"
         },
         {
