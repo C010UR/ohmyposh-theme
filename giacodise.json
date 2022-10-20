@@ -203,6 +203,16 @@
             "type": "prompt"
         }
     ],
+    "transient_prompt": {
+        "background": "transparent",
+        "foreground_templates": [
+            "{{ if eq .Shell \"bash\" }}#DF9395{{end}}",
+            "{{ if eq .Shell \"powershell\" }}#61AFEF{{end}}",
+            "{{ if eq .Shell \"pwsh\" }}#61AFEF{{end}}",
+            "{{ if eq .Shell \"cmd\" }}#B2BEC3{{end}}"
+        ],
+        "template": ">> "
+    },
     "version": 2,
     "final_space": true
 }
