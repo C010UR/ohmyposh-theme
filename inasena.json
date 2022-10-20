@@ -118,7 +118,12 @@
                     "type": "node",
                     "style": "plain",
                     "foreground": "#026E00",
-                    "template": "\uE718 {{ if not .Error }}{{ .Full }}{{ end }} "
+                    "properties": {
+                        "fetch_package_manager": true,
+                        "yarn_icon": "<#2C8EBB>\uF61A</>",
+                        "npm_icon": "<#CC0000>\uE71E</>"
+                    },
+                    "template": "\uE718 {{ if .PackageManagerIcon }}{{ .PackageManagerIcon }}{{ end }} {{ if not .Error }}{{ .Full }}{{ end }} "
                 },
                 {
                     "type": "nx",
@@ -173,12 +178,15 @@
                         "{{ if gt .Behind 0 }}#C792EA{{ end }}"
                     ],
                     "properties": {
-                        "branch_max_length": 40,
+                        "branch_icon": "\uE725 ",
                         "fetch_stash_count": true,
                         "fetch_status": true,
-                        "fetch_upstream_icon": true
+                        "fetch_upstream_icon": true,
+                        "fetch_worktree_count": true,
+                        "truncate_symbol": "...",
+                        "branch_max_length": 25
                     },
-                    "template": "{{ .UpstreamIcon }}{{ .HEAD }}{{if .BranchStatus }} {{ .BranchStatus }}{{ end }}{{ if .Working.Changed }} \uF044 {{ .Working.String }}{{ end }}{{ if and (.Working.Changed) (.Staging.Changed) }} |{{ end }}{{ if .Staging.Changed }} \uF046 {{ .Staging.String }}{{ end }}{{ if gt .StashCount 0 }} \uF692 {{ .StashCount }}{{ end }} "
+                    "template": "{{ .UpstreamIcon }}{{ .HEAD }}{{if .BranchStatus }} {{ .BranchStatus }}{{ end }}{{ if .Working.Changed }} <#DB5E63>\uEA73 {{ .Working.String }}</>{{ end }}{{ if and (.Working.Changed) (.Staging.Changed) }} |{{ end }}{{ if .Staging.Changed }} <#B8FF75>\uF62B {{ .Staging.String }}</>{{ end }} "
                 }
             ],
             "type": "prompt"
