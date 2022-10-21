@@ -212,9 +212,9 @@
     "transient_prompt": {
         "background": "transparent",
         "foreground_templates": [
-            "{{ if eq .Shell \"bash\" }}#DF9395{{end}}",
-            "{{ if eq .Shell \"powershell\" }}#61AFEF{{end}}",
-            "{{ if eq .Shell \"pwsh\" }}#61AFEF{{end}}",
+            "{{ if eq .Shell \"bash\" }}#A63C40{{end}}",
+            "{{ if eq .Shell \"powershell\" }}#40739E{{end}}",
+            "{{ if eq .Shell \"pwsh\" }}#40739E{{end}}",
             "{{ if eq .Shell \"cmd\" }}#B2BEC3{{end}}"
         ],
         "template": "{{ if .Segments.Executiontime.FormattedMs }}{{ .Segments.Executiontime.FormattedMs }}{{else}}0ms{{end}} {{ if gt .Code 0 }}<#EE5253>\uF00D</>{{else}}<#1FA07D>\uF00C</>{{end}}  >> "
