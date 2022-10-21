@@ -196,16 +196,8 @@
             "alignment": "right",
             "segments": [
                 {
-                    "type": "exit",
-                    "style": "plain",
-                    "foreground": "#B8FF75",
-                    "foreground_templates": [
-                        "{{ if gt .Code 0 }}#E06C75{{ end }}"
-                    ],
-                    "template": "\uF00D "
-                },
-                {
                     "type": "executiontime",
+                    "alis": "ExecTime",
                     "style": "plain",
                     "foreground": "#B8FF75",
                     "foreground_templates": [
@@ -215,7 +207,7 @@
                         "style": "roundrock",
                         "always_enabled": true
                     },
-                    "template": "{{ .FormattedMs }} "
+                    "template": "{{ if gt .Code 0 }}<#E06C75>\uF00D{{else}}<#B8FF75>\uF00C{{end}} {{ .FormattedMs }}</>"
                 },
                 {
                     "type": "time",
@@ -290,7 +282,7 @@
             "{{ if eq .Shell \"pwsh\" }}#61AFEF{{end}}",
             "{{ if eq .Shell \"cmd\" }}#B2BEC3{{end}}"
         ],
-        "template": ">> "
+        "template": "{{ .Segments.Executiontime.FormattedMs }} {{ if gt .Code 0 }}<#E06C75>\uF00D</>{{else}}<#B8FF75>\uF00C</>{{end}}  >> "
     },
     "version": 2,
     "final_space": true
