@@ -8,10 +8,15 @@
                 {
                     "type": "path",
                     "style": "diamond",
-                    "background": "#40739E",
                     "foreground": "#FEFEFE",
                     "leading_diamond": "\uE0B6",
                     "trailing_diamond": "\uE0B0",
+                    "background_templates": [
+                        "{{ if eq .Shell \"bash\" }}#A63C40{{end}}",
+                        "{{ if eq .Shell \"powershell\" }}#40739E{{end}}",
+                        "{{ if eq .Shell \"pwsh\" }}#40739E{{end}}",
+                        "{{ if eq .Shell \"cmd\" }}#B2BEC3{{end}}"
+                    ],
                     "properties": {
                         "style": "folder"
                     },
