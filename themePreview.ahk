@@ -12,7 +12,7 @@ command(cmd)
     Send, %cmd%
     Sleep, 600
     Send, {Enter}
-    Sleep, 2000
+    Sleep, 1000
 }
 
 ctrltab()
@@ -34,6 +34,7 @@ ctrltab()
 pressEnter()
 pressEnter()
 pressEnter()
+command("clear")
 
 ctrltab()
 command("git reset HEAD~")
