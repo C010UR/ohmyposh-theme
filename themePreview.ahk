@@ -7,12 +7,12 @@ pressEnter()
     Send, {Enter}
     Sleep, 600
 }
-command(cmd)
+command(cmd, delay := 2000)
 {
     Send, %cmd%
     Sleep, 600
     Send, {Enter}
-    Sleep, 1000
+    Sleep, delay
 }
 
 ctrltab()
@@ -26,8 +26,10 @@ pressEnter()
 pressEnter()
 pressEnter()
 command("mistake")
-command("ni 1.txt")
-command("git add .")
+command("ni 1.js")
+command("ni 1.php")
+command("ni 1.cs")
+command("git add 1.js")
 command("git commit -m 'New commit'")
 
 ctrltab()
@@ -37,7 +39,9 @@ pressEnter()
 command("clear")
 
 ctrltab()
-command("git reset HEAD~")
-command("ri 1.txt")
-command("clear")
+command("git reset HEAD~", 300)
+command("ri 1.js", 300)
+command("ri 1.php", 300)
+command("ri 1.cs", 300)
+command("clear", 300)
 return
