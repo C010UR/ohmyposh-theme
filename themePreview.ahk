@@ -4,14 +4,14 @@ SetWorkingDir, %A_ScriptDir%
 
 pressEnter()
 {
-    Send, Enter
-    Sleep, 400
+    Send, {Enter}
+    Sleep, 600
 }
 command(cmd)
 {
-    Send, cmd
-    Sleep, 100
-    Send, enter
+    Send, %cmd%
+    Sleep, 600
+    Send, {Enter}
     Sleep, 2000
 }
 
