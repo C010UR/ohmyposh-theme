@@ -207,7 +207,7 @@
                         "style": "roundrock",
                         "always_enabled": true
                     },
-                    "template": "{{ if gt .Code 0 }}<#E06C75>\uF00D{{else}}<#B8FF75>\uF00C{{end}} {{ .FormattedMs }}</>"
+                    "template": "{{ if gt .Code 0 }}<#E06C75>\uF00D{{else}}<#B8FF75>\uF00C{{end}} {{ .FormattedMs }} </>"
                 },
                 {
                     "type": "time",
