@@ -296,10 +296,8 @@
                     ],
                     "properties": {
                         "branch_icon": "\uE725 ",
-                        "fetch_stash_count": true,
                         "fetch_status": true,
                         "fetch_upstream_icon": true,
-                        "fetch_worktree_count": true,
                         "truncate_symbol": "...",
                         "branch_max_length": 25
                     },
