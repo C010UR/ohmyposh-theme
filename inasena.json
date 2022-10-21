@@ -20,7 +20,7 @@
                             "pwsh": "<#3082C5>Shell</>",
                             "powershell": "<#3082C5>Shell</>",
                             "cmd": "<#B2BEC3>Cmd</>",
-                            "bash": "<#A63C40>Shell</>"
+                            "bash": "<#A63C40>Bash</>"
                         }
                     },
                     "template": "\uE7A2 {{ .Name }} "
