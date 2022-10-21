@@ -187,7 +187,7 @@
                         "truncate_symbol": "...",
                         "branch_max_length": 25
                     },
-                    "template": "{{ .UpstreamIcon }}{{ .HEAD }}{{if .BranchStatus }} {{ .BranchStatus }}{{ end }}{{ if .Working.Changed }} <#DB5E63>\uEA73 {{ .Working.String }}</>{{ end }}{{ if and (.Working.Changed) (.Staging.Changed) }} |{{ end }}{{ if .Staging.Changed }} <#B8FF75>\uF62B {{ .Staging.String }}</>{{ end }} "
+                    "template": "{{ .UpstreamIcon }}{{ .HEAD }}{{if .BranchStatus }} {{ .BranchStatus }}{{ end }}{{ if .Working.Changed }} <#DB5E63>\uEA73 {{ .Working.String }}</>{{ end }}{{ if and (.Working.Changed) (.Staging.Changed) }} |{{ end }}{{ if .Staging.Changed }} <#B8FF75> \uF62B {{ .Staging.String }}</>{{ end }} "
                 }
             ],
             "type": "prompt"
