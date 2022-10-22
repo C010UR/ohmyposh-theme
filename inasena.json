@@ -410,7 +410,7 @@
             "{{ if eq .Shell \"pwsh\" }}p:terminal-pwsh{{end}}",
             "{{ if eq .Shell \"cmd\" }}p:terminal-cmd{{end}}"
         ],
-        "template": "{{ if .Segments.Executiontime.FormattedMs }}{{ .Segments.Executiontime.FormattedMs }}{{else}}0ms{{end}} {{ if gt .Code 0 }}<p:code-ko>\uF00D</>{{else}}<p:code-ok>\uF00C</>{{end}} <p:prompt]>\uF054</> "
+        "template": "{{ if .Segments.Executiontime.FormattedMs }}{{ .Segments.Executiontime.FormattedMs }}{{else}}0ms{{end}} {{ if gt .Code 0 }}<p:code-ko>\uF00D</>{{else}}<p:code-ok>\uF00C</>{{end}} <p:prompt>\uF054</> "
     },
     "version": 2,
     "final_space": true
