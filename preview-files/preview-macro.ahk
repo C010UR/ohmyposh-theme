@@ -47,13 +47,33 @@ ctrlShiftP()
     Sleep, 200
 }
 
+startRecording()
+{
+    Send, {CtrlDown}{F2}
+    Sleep, 100
+    Send, {CtrlUp}
+    Sleep, 300
+    Send, {AltDown}{Tab}{AltUp}
+    Sleep, 1000
+}
+
+stopRecording()
+{
+    Sleep, 1000
+    Send, {AltDown}{Tab}{AltUp}
+    Sleep, 300
+    Send, {CtrlDown}{F2}
+    Sleep, 100
+    Send, {CtrlUp}
+}
+
 ; Select option in the drop-down menu
 dropDownSelect(cmd)
 {
     Send, %cmd%
     Sleep, 300
     Send, {Enter}
-    Sleep, 200
+    Sleep, 300
 }
 
 ; Prepare for the preview
@@ -86,6 +106,7 @@ return
 
 ; Preview the theme
 #]::
+    startRecording()
     ; Showcase new-lines and wrong command
     echo("PowerShell support")
     echo("Transient prompt support")
@@ -125,4 +146,6 @@ return
     command("git reset HEAD~", 200)
     command(".\preview-files\remove-preview-files.ps1", 200)
     clear()
+
+    stopRecording()
 return
