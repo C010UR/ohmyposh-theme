@@ -3,16 +3,15 @@
 If you want to install themes first [install](https://ohmyposh.dev/docs/) OhMyPosh, [change your prompt](https://ohmyposh.dev/docs/installation/prompt) and [configure](https://ohmyposh.dev/docs/installation/customize) OhMyPosh to use your themes.
 
 ## Inasena dark
-https://user-images.githubusercontent.com/95462776/197341786-a72c126c-c65a-4288-bf7c-b714b6d0f740.mp4
+https://user-images.githubusercontent.com/95462776/197342230-eaa327e8-297a-49eb-905b-b576518da66e.mp4
 
 ## Inasena light
 To make it work you need to set *Environment variable* `POSH` to `"LIGHT"` in your environment.
 
-https://user-images.githubusercontent.com/95462776/197341789-337712c0-0982-4490-ad54-0d93a1a87c01.mp4
+https://user-images.githubusercontent.com/95462776/197342256-b6d36a9d-0949-4d8b-9131-90df1ce43800.mp4
 
 ## Giacodise dark
-
-https://user-images.githubusercontent.com/95462776/197341800-b447a6b3-414f-4c84-b834-9fc95e66a22d.mp4
+https://user-images.githubusercontent.com/95462776/197342276-c647add7-5edf-42a7-a970-b0777ff09ee8.mp4
 
 # Themes and fonts used in the preview
 The font used in the preview is ["FiraCode Nerd Font"](https://www.programmingfonts.org/#firacode) ([Dowload](https://github.com/ryanoasis/nerd-fonts/releases/download/v2.2.2/FiraCode.zip)).
