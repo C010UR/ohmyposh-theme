@@ -64,3 +64,30 @@ The theme of the Debian WSL is ["Tomorrow Night Burns"](https://windowsterminalt
     "yellow": "#D3494E"
 }
 ```
+
+The light theme is ["Tinacious Design (Light)"](https://windowsterminalthemes.dev/?theme=Tinacious%20Design%20(Light)):
+```JSON
+{
+    "name": "Tinacious Design (Light)",
+    "black": "#1d1d26",
+    "red": "#ff3399",
+    "green": "#00d364",
+    "yellow": "#ffcc66",
+    "blue": "#00cbff",
+    "purple": "#cc66ff",
+    "cyan": "#00ceca",
+    "white": "#cbcbf0",
+    "brightBlack": "#636667",
+    "brightRed": "#ff2f92",
+    "brightGreen": "#00d364",
+    "brightYellow": "#ffd479",
+    "brightBlue": "#00cbff",
+    "brightPurple": "#d783ff",
+    "brightCyan": "#00d5d4",
+    "brightWhite": "#d5d6f3",
+    "background": "#f8f8ff",
+    "foreground": "#1d1d26",
+    "selectionBackground": "#ff3399",
+    "cursorColor": "#cbcbf0"
+}
+```
