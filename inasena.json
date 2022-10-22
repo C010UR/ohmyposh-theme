@@ -301,7 +301,7 @@
                         "truncate_symbol": "...",
                         "branch_max_length": 25
                     },
-                    "template": "{{ .UpstreamIcon }}{{ .HEAD }}{{if .BranchStatus }} {{ .BranchStatus }}{{ end }}{{ if .Working.Changed }} <p:git-working-changed> \uEA73 {{ .Working.String }} </>{{ end }}{{ if and (.Working.Changed) (.Staging.Changed) }}|{{ end }}{{ if .Staging.Changed }} <p:git-staging-changed>\uF62B {{ .Staging.String }}</>{{ end }} "
+                    "template": "{{ .UpstreamIcon }}{{ .HEAD }}{{if .BranchStatus }} {{ .BranchStatus }}{{ end }}{{ if .Working.Changed }} <p:git-working-changed>\uEA73 {{ .Working.String }} </>{{ end }}{{ if and (.Working.Changed) (.Staging.Changed) }}|{{ end }}{{ if .Staging.Changed }} <p:git-staging-changed>\uF62B {{ .Staging.String }}</>{{ end }} "
                 }
             ],
             "type": "prompt"

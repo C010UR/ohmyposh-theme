@@ -51,9 +51,9 @@ ctrlShiftP()
 dropDownSelect(cmd)
 {
     Send, %cmd%
-    Sleep, 200
+    Sleep, 300
     Send, {Enter}
-    Sleep, 100
+    Sleep, 200
 }
 
 ; Prepare for the preview
@@ -69,6 +69,19 @@ dropDownSelect(cmd)
     dropDownSelect("OhMyPosh Debian")
     command("clear", 100)
     ctrltab()
+    ctrlShiftP()
+    dropDownSelect("Toggle focus mode")
+return
+
+; Reset preparations
+#\::
+    ctrlShiftP()
+    dropDownSelect("New tab...")
+    dropDownSelect("PowerShell")
+    ctrlShiftP()
+    dropDownSelect("Close all other tabs")
+    ctrlShiftP()
+    dropDownSelect("Toggle focus mode")
 return
 
 ; Preview the theme
