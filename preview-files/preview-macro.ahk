@@ -133,8 +133,8 @@ return
 
     ; Switch to another terminal to show support of multiple types of terminals
     ctrltab()
-    echo("Bash support", 300)
-    echo("Transient prompt support", 300)
+    echo("Bash support", 600)
+    echo("Transient prompt support", 600)
     pressEnter()
     pressEnter()
     pressEnter()
