@@ -406,11 +406,11 @@
         "foreground": "p:terminal-other",
         "foreground_templates": [
             "{{ if eq .Shell \"bash\" }}p:terminal-bash{{end}}",
-            "{{ if eq .Shell \"powershell\" }}p:terminal-pwsh{{end}}",
+            "{{ if eq .Shell \"powershell\" }}p:terminal-powershell{{end}}",
             "{{ if eq .Shell \"pwsh\" }}p:terminal-pwsh{{end}}",
             "{{ if eq .Shell \"cmd\" }}p:terminal-cmd{{end}}"
         ],
-        "template": "{{ .Segments.Executiontime.FormattedMs }} {{ if gt .Code 0 }}<p:code-ko>\uF00D</>{{else}}<p:code-ok>\uF00C</>{{end}} >> "
+        "template": "{{ if .Segments.Executiontime.FormattedMs }}{{ .Segments.Executiontime.FormattedMs }}{{else}}0ms{{end}} {{ if gt .Code 0 }}<p:code-ko>\uF00D</>{{else}}<p:code-ok>\uF00C</>{{end}} <p:prompt]>\uF054</> "
     },
     "version": 2,
     "final_space": true
