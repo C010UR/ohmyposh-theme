@@ -1,15 +1,17 @@
 {
     "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
     "palette": {
-        "light-fg": "#FEFEFE",
-        "dark-fg": "#1C1C1D",
-        "code-ok": "#1FA07D",
-        "code-ko": "#EE5253",
+        "light-fg": "white",
+        "dark-fg": "black",
+        "code-ok": "green",
+        "code-ko": "red",
         "terminal-pwsh": "#40739E",
         "terminal-powershell": "p:terminal-pwsh",
         "terminal-cmd": "#60717B",
         "terminal-bash": "#A63C40",
         "terminal-other": "p:terminal-cmd",
+        "docker": "#0B1F31",
+        "docker-fg": "#3A8FE3",
         "git-default": "#FFFB38",
         "git-changed": "#FFEB95",
         "git-ahead-behind": "#C5E478",
@@ -109,6 +111,13 @@
                         "branch_max_length": 25
                     },
                     "template": " {{ .UpstreamIcon }}{{ .HEAD }}{{if .BranchStatus }} {{ .BranchStatus }}{{ end }}{{ if .Working.Changed }} <p:git-working-changed>\uEA73 {{ .Working.String }} </>{{ end }}{{ if and (.Working.Changed) (.Staging.Changed) }}|{{ end }}{{ if .Staging.Changed }} <p:git-staging-changed>\uF62B {{ .Staging.String }}</>{{ end }} "
+                },
+                {
+                    "type": "docker",
+                    "style": "powerline",
+                    "background": "p:docker",
+                    "foreground": "p:docker-fg",
+                    "template": "\uE7B0 {{ if not .Error }}{{ .Context }}{{ end }} "
                 },
                 {
                     "type": "angular",
