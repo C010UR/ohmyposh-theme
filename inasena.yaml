@@ -7,14 +7,10 @@ blocks:
   - type: prompt
     alignment: left
     segments:
-      - type: text
-        style: plain
-        foreground: default
-        template: "┌ "
       - type: path
         style: plain
         foreground: default
-        template: " {{ .Path }}"
+        template: "┌  {{ .Path }}"
         properties:
           style: full
       - type: git
