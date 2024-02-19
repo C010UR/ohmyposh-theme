@@ -3,6 +3,10 @@ $schema: https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes
 version: 2
 final_space: true
 console_title_template: "{{ .Folder }}{{ if .Root }} :: root{{ end }} :: {{ .Shell }}"
+transient_prompt:
+  background: transparent
+  foreground: default
+  template: "{{ if .Segments.Executiontime.FormattedMs }}{{ .Segments.Executiontime.FormattedMs }}{{ else }}0ms{{ end }} {{ if gt .Code 0 }}<p:code-ko></>{{ else }}<p:code-ok></>{{ end }}  "
 blocks:
   - type: prompt
     alignment: left
