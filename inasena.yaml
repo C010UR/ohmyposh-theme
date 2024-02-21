@@ -43,7 +43,7 @@ blocks:
       - type: time
         style: plain
         foreground: p:time
-        template: "[{{ .CurrentDate | date .Format }}]"
+        template: "[{{ .CurrentDate | date .Format }}] "
         properties:
           time_format: "Mon 15:04:05"
   - type: prompt
