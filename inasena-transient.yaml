@@ -6,7 +6,7 @@ console_title_template: "{{ .Folder }}{{ if .Root }} :: root{{ end }} :: {{ .She
 transient_prompt:
   background: transparent
   foreground: default
-  template: "{{ if .Segments.Executiontime.FormattedMs }}{{ .Segments.Executiontime.FormattedMs }}{{ else }}0ms{{ end }} {{ if gt .Code 0 }}<p:code-ko></>{{ else }}<p:code-ok></>{{ end }}  "
+  template: "{{ if .Segments.Executiontime.FormattedMs }}{{ .Segments.Executiontime.FormattedMs }}{{ else }}0ms{{ end }} {{ if gt .Code 0 }}<p:code-ko>{{ else }}<p:code-ok>{{ end }}[{{.Code}}]</>{{ end }}  "
 blocks:
   - type: prompt
     alignment: left
@@ -37,10 +37,8 @@ blocks:
     segments:
       - type: executiontime
         style: plain
-        foreground: p:code-ok
-        foreground_templates:
-          - "{{ if gt .Code 0 }}p:code-ko{{ end }}"
-        template: "{{ if gt .Code 0 }}{{ else }}{{ end }} {{ .FormattedMs }} "
+        foreground: default
+        template: "{{ if gt .Code 0 }}<p:code-ko>{{ else }}<p:code-ok>{{ end }}[{{.Code}}]</> ({{ .FormattedMs }}) "
         properties:
           always_enabled: true
           style: roundrock
