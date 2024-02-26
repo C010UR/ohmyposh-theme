@@ -4,7 +4,6 @@ version: 2
 final_space: true
 console_title_template: "{{ .Folder }}{{ if .Root }} :: root{{ end }} :: {{ .Shell }}"
 transient_prompt:
-  background: transparent
   foreground: default
   template: "{{ if .Segments.Executiontime.FormattedMs }}{{ .Segments.Executiontime.FormattedMs }}{{ else }}0ms{{ end }} {{ if gt .Code 0 }}<p:code-ko>{{ else }}<p:code-ok>{{ end }}[{{.Code}}]</>{{ end }}  "
 blocks:
@@ -14,7 +13,7 @@ blocks:
       - type: path
         style: plain
         foreground: default
-        template: "┌  {{ .Path }}"
+        template: "╭  {{ .Path }}"
         properties:
           style: full
       - type: git
@@ -54,7 +53,7 @@ blocks:
       - type: text
         style: plain
         foreground: default
-        template: "└ "
+        template: "╰ "
       - type: root
         style: plain
         foreground: p:root

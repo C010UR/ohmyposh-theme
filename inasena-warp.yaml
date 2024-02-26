@@ -10,7 +10,7 @@ blocks:
       - type: path
         style: plain
         foreground: default
-        template: "╭  {{ .Path }}"
+        template: " {{ .Path }}"
         properties:
           style: full
       - type: git
@@ -21,45 +21,13 @@ blocks:
           - "{{ if and (gt .Ahead 0) (gt .Behind 0) }}p:git-ahead-behind{{ end }}"
           - "{{ if gt .Ahead 0 }}p:git-ahead{{ end }}"
           - "{{ if gt .Behind 0 }}p:git-behind{{ end }}"
-        template: " {{ .HEAD }}{{if .BranchStatus }} {{ .BranchStatus }}{{ end }}{{ if .Working.Changed }} <p:git-working-changed> {{ .Working.String }} </>{{ end }}{{ if and (.Working.Changed) (.Staging.Changed) }}|{{ end }}{{ if .Staging.Changed }} <p:git-staging-changed> {{ .Staging.String }}</>{{ end }} "
+        template: " {{ .HEAD }}{{if .BranchStatus }} {{ .BranchStatus }}{{ end }}{{ if .Working.Changed }} <p:git-working-changed> {{ .Working.String }} </>{{ end }}{{ if and (.Working.Changed) (.Staging.Changed) }}|{{ end }}{{ if .Staging.Changed }} <p:git-staging-changed> {{ .Staging.String }}</>{{ end }}"
         properties:
           branch_icon: "\U000F062C "
           branch_max_length: 25
           fetch_status: true
           fetch_upstream_icon: true
           truncate_symbol: "..."
-  - type: prompt
-    alignment: right
-    segments:
-      - type: executiontime
-        style: plain
-        foreground: default
-        template: "{{ if gt .Code 0 }}<p:code-ko>{{ else }}<p:code-ok>{{ end }}[{{.Code}}]</> ({{ .FormattedMs }}) "
-        properties:
-          always_enabled: true
-          style: roundrock
-      - type: time
-        style: plain
-        foreground: p:time
-        template: "[{{ .CurrentDate | date .Format }}] "
-        properties:
-          time_format: "Mon 15:04:05"
-  - type: prompt
-    alignment: left
-    segments:
-      - type: text
-        style: plain
-        foreground: default
-        template: "╰ "
-      - type: root
-        style: plain
-        foreground: p:root
-        template: " "
-      - type: text
-        style: plain
-        foreground: p:prompt
-        template: ""
-    newline: true
 palettes:
   template: '{{ if eq .Env.POSH "LIGHT" }}light{{ else }}dark{{ end }}'
   list:
